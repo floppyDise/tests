@@ -2,6 +2,8 @@
 
 <p><%= @article.body %></p>
 
+<p>written by <b><%= @article.author.firstname%></b> <b><%=@article.author.lastname %></b></p>
+
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
   <li><%= link_to "Destroy", article_path(@article), data: {
@@ -15,3 +17,4 @@
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
+

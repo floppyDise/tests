@@ -1,0 +1,25 @@
+<table>
+   <tr>
+	<th> First name </th>
+	<th> Last name </th>
+	<th> email </th>
+   </tr>
+   <tr>
+	<td><%= @author.firstname %></td>
+	<td><%= @author.lastname %></td> 
+	<td><%= @author.email %></p></td>
+   </tr>
+</table>
+
+	<p><%= link_to "Edit", edit_author_path(@author) %> <%= link_to "Delete account", author_path(@author), data: {
+		turbo_method: :delete,
+		turbo_confirm: "Are you sure?"
+		} %></p>
+
+<p><b>Author's articles:</b></p>
+<ul>
+ <% @articles.each do |article| %>
+ <li><%= link_to article.title, article %>
+</li>
+<% end %>
+</ul>
