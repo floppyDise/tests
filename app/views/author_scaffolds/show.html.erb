@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @author_scaffold %>
+
+<div>
+  <%= link_to "Edit this author scaffold", edit_author_scaffold_path(@author_scaffold) %> |
+  <%= link_to "Back to author scaffolds", author_scaffolds_path %>
+
+  <%= button_to "Destroy this author scaffold", @author_scaffold, method: :delete %>
+</div>

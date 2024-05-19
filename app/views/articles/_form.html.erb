@@ -1,11 +1,11 @@
 <%= form_with model: @article do |form| %>
-  
+<hr>  
   <div>
    <%= form.label :status %><br>
    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
   </div>
   
-  <div>
+  <br><div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
     <% @article.errors.full_messages_for(:title).each do |message| %>
@@ -27,6 +27,6 @@
   </div>  
   
   <div>
-    <%= form.submit %>
+    <br><%= form.submit %>
   </div>
 <% end %>

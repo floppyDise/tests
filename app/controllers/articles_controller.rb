@@ -4,7 +4,6 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
-    @authors = Author.all
   end
 
   def show
